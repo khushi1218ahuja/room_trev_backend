@@ -11,15 +11,17 @@
     <relativePath/>
   </parent>
 
-  <groupId>com.staybnb</groupId>
-  <artifactId>staybnb-spring</artifactId>
+  <groupId>com.roomtrev</groupId>
+  <artifactId>room-trev-spring</artifactId>
   <version>1.0.0</version>
-  <name>StayBnB Spring Boot API</name>
+  <name>RoomTrev Spring Boot API</name>
   <description>Spring Boot backend for StayBnB room booking platform</description>
 
   <properties>
     <java.version>17</java.version>
     <jjwt.version>0.12.6</jjwt.version>
+    <lombok.version>1.18.38</lombok.version>
+    <byte-buddy.version>1.17.5</byte-buddy.version>
   </properties>
 
   <dependencies>
@@ -74,7 +76,7 @@
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
-      <version>1.18.32</version>
+      <version>${lombok.version}</version>
       <optional>true</optional>
     </dependency>
 
@@ -105,6 +107,20 @@
 
   <build>
     <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <proc>full</proc>
+          <annotationProcessorPaths>
+            <path>
+              <groupId>org.projectlombok</groupId>
+              <artifactId>lombok</artifactId>
+              <version>${lombok.version}</version>
+            </path>
+          </annotationProcessorPaths>
+        </configuration>
+      </plugin>
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
