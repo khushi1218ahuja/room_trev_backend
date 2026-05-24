@@ -1,6 +1,6 @@
-# StayBnB — Spring Boot Backend
+# RoomTrev Backend
 
-A RESTful API backend for **StayBnB**, a room booking platform built with Spring Boot 3, Spring Security, JWT authentication, and PostgreSQL.
+A RESTful API backend for **RoomTrev**, a room booking platform built with Spring Boot 3, Spring Security, JWT authentication, and PostgreSQL.
 
 ---
 
@@ -22,10 +22,10 @@ A RESTful API backend for **StayBnB**, a room booking platform built with Spring
 ## Project Structure
 
 ```
-staybnb-spring/
+roomtrev-spring/
 ├── src/
 │   ├── main/
-│   │   ├── java/com/staybnb/
+│   │   ├── java/com/roomtrev/
 │   │   │   ├── config/          # Security configuration
 │   │   │   ├── controller/      # REST controllers (Auth, Room, Booking, Review, Admin, Stats)
 │   │   │   ├── dto/             # Request/Response DTOs
@@ -33,11 +33,11 @@ staybnb-spring/
 │   │   │   ├── repository/      # Spring Data JPA repositories
 │   │   │   ├── security/        # JWT filter, JwtUtil, UserDetailsService
 │   │   │   ├── service/         # Business logic
-│   │   │   └── StaybnbApplication.java
+│   │   │   └── RoomTrevApplication.java
 │   │   └── resources/
 │   │       └── application.properties
 │   └── test/
-│       └── java/com/staybnb/
+│       └── java/com/roomtrev/
 │           ├── security/        # JWT unit tests
 │           └── service/         # Service unit tests
 └── pom.xml
@@ -166,8 +166,8 @@ export PORT=8081
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/khushi1218ahuja/stay_bnb_java.git
-cd stay_bnb_java
+git clone https://github.com/khushi1218ahuja/room_trev_backend.git
+cd room_trev_backend
 ```
 
 ### 2. Set environment variables
